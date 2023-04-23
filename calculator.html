@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<title>Calci</title>
+<head>
+    <script>
+        function op(o){
+            var x=parseInt(document.getElementById("num1").value)
+            var y=parseInt(document.getElementById("num2").value)
+            if(o== "+"){
+             var result=x+y}
+             if(o=="-"){
+             var result=x-y}
+             if(o=="*"){
+             var result=x*y}
+             if(o=="/"){
+             var result=x/y}
+             if(o=="%"){
+             var result=x%y} 
+             if(o=="^"){
+             var result=x**y}
+        document.getElementById("res").value=result
+        }
+    </script>
+    <style>
+        
+        
+        button{
+            height: 40px;
+            width:40px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            font-size: large;
+        }
+        fieldset{
+            width: 30%;
+            border-radius: 5px;
+            border-style: none;
+            text-align: center;
+            border: 1px solid;
+            background-color: aquamarine;
+            margin:50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+  <fieldset>
+        <legend style="text-align: left;"><h1>CALCULATOR</h1></legend>
+  
+    <h2>Enter 1st number</h2>
+    
+    <input type="text" id="num1"> 
+
+    <h2>Enter 2nd number</h2>
+    <input type="text" id="num2">
+    <br>
+    <br>
+
+    <button onclick="op('+')">+</button>
+    <button onclick="op('-')">-</button>
+    <button onclick="op('*')">*</button>
+    <button onclick="op('/')">/</button>
+    <button onclick="op('%')">%</button>
+    <button onclick="op('^')">^</button>
+    <h2>Result</h2>
+    <input type="number" id="res">
+  </fieldset>  
+    </center>
+</body>
